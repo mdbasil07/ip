@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Your Property - BK Real Estate</title>
+    <style>
+        /* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, h1, h2, p, label, input, select, button, textarea, ul, li {
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+}
+
+header {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 1em 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo a {
+    color: #ecf0f1;
+    font-size: 1.5em;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+}
+
+header nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: #34495e;
+}
+
+main {
+    flex: 1;
+    padding: 2em 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Sell Section Styles */
+.sell-section {
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 2em;
+}
+
+.sell-content {
+    display: flex;
+    gap: 2em;
+    align-items: flex-start;
+}
+
+.sell-form {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.sell-form label {
+    font-weight: bold;
+}
+
+.sell-form input, .sell-form select, .sell-form textarea {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.sell-form textarea {
+    resize: vertical;
+}
+
+.sell-form button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: max-content;
+}
+
+.sell-form button:hover {
+    background-color: #2980b9;
+}
+
+/* Image Container */
+.sell-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    padding: 200px; /* Adjust padding for spacing */
+}
+
+/* Image Styling */
+.sell-image img {
+    width: 500%; /* Adjust width */
+    max-width: 400px; /* Max width to control size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 1em 0;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">BK Real Estate</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./home.php">Home</a></li>
+                    <li><a href="./buy.html">Buy</a></li>
+                    <li><a href="./sell.html">Sell</a></li>
+                    <li><a href="./contact.php">Contact Us</a></li>
+                    <li><a href="./about.html">About Us</a></li>
+                    <li><a href="./index.php" class="navbar-link styled-link" data-nav-link><strong>Logout</strong></a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container sell-section">
+            <h1>Sell Your Property</h1><br>
+            <div class="sell-content">
+                <form class="sell-form" id="sell-property-form">
+                    <div>
+                        <label for="title">Property Title:</label>
+                        <input type="text" id="title" name="title" placeholder="Enter property title" required>
+                    </div>
+                    <div>
+                        <label for="location"></label><br>
+                       <b>Location:</b> <input type="text" id="location" name="location" placeholder="Enter property location" required>
+                    </div>
+                    <div>
+                        <label for="price"></label><br>
+                       <b>Price:</b> <input type="number" id="price" name="price" placeholder="Enter property price" required>
+                    </div>
+                    <div>
+                        <label for="property-type"></label><br>
+                        <b>Property Type:</b>
+                        <select id="property-type" name="property-type" required>
+                            <option value="" disabled selected>Select property type</option>
+                            <option value="house">House</option>
+                            <option value="apartment">Apartment</option>
+                            <option value="commercial">Commercial</option>
+                            <option value="land">Land</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="contact-name"></label><br>
+                        <b>Contact Name:</b>
+                        <input type="text" id="contact-name" name="contact-name" placeholder="Enter your name" required>
+                    </div>
+                    <div>
+                        <label for="contact-email"></label><br>
+                        <b>Contact Email:</b>
+                        <input type="email" id="contact-email" name="contact-email" placeholder="Enter your email" required>
+                    </div>
+                    <div>
+                        <label for="contact-phone"></label><br>
+                        <b>Contact Phone:</b>
+                        <input type="tel" id="contact-phone" name="contact-phone" placeholder="Enter your phone number" required>
+                    </div>
+                    <div>
+                        <label for="description"></label><br>
+                        <b>Property Description:</b>
+                        <textarea id="description" name="description" rows="4" placeholder="Enter property description" required></textarea>
+                    </div>
+                    <!-- New field for Upload Photos -->
+                    <div>
+                        <label for="photos"></label><br>
+                        <b>Upload Photos:</b>
+                        <input type="file" id="photos" name="photos" accept="image/*" multiple required>
+                    </div>
+                    <div>
+                        <button type="submit">Submit Property</button>
+                    </div>
+                </form>
+                <!-- Placeholder for the image on the right side -->
+                <div class="sell-image">
+                    <img src="./images/vijay.jpg" alt="Property Image">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 BK Real Estate. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('sell-property-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting traditionally
+            alert('Property details submitted successfully!\nYour Property is SAFE with US!');
+        });
+    </script>
+    
+</body>
+</html>

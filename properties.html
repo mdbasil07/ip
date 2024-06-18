@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Details - BK Real Estate</title>
+    <style>
+        /* Basic styles shared by all sections */
+        body, h1, h2, p, ul, li, a, button {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header, footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 1em 0;
+        }
+
+        header .container, footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo a, header nav ul li a {
+            color: #ecf0f1;
+            text-decoration: none;
+        }
+
+        header .logo a {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1em;
+        }
+
+        header nav ul li a {
+            padding: 0.5em 1em;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            background-color: #34495e;
+        }
+
+        .house-details {
+            background-color: #ecf0f1;
+            padding: 2em;
+            margin: 2em 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .house-details .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2em;
+        }
+
+        .house-photo {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .house-photo img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .house-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .house-content h1, .house-content h2 {
+            color: #2c3e50;
+            margin-bottom: 1em;
+        }
+
+        .house-content p, .house-content ul {
+            margin-bottom: 1em;
+            line-height: 1.6;
+        }
+
+        .house-content ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .house-content ul li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0;
+    text-align: center;
+}
+
+footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #2980b9;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 0.5em 1em;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="./buy.html">Buy A House</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./home.php">Home</a></li>
+                    <li><a href="./buy.html">Buy</a></li>
+                    <li><a href="./sell.html">Sell</a></li>
+                    <li><a href="./contact.php">Contact Us</a></li>
+                    <li><a href="./about.html">About Us</a></li>
+                    <li><a href="./index.php" class="navbar-link styled-link" data-nav-link><strong>Logout</strong></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <section class="house-details">
+            <div class="container">
+                <div class="house-photo">
+                    <img src="./images/buy1.jpeg" alt="Beautiful House">
+                </div>
+                <div class="house-content">
+                    <h1>Beautiful Family House</h1>
+                    <p>This stunning 4-bedroom, 3-bathroom house offers a perfect blend of modern amenities and classic charm. Nestled in a serene neighborhood, this home is ideal for families looking for comfort and convenience.</p>
+                    
+                    <h2>Features:</h2>
+                    <ul>
+                        <li>Loaction: Suburban</li>
+                        <li>Square Feet: 3,200sqfeet</li>
+                        <li>Spacious living room with fireplace</li>
+                        <li>Modern kitchen with stainless steel appliances</li>
+                        <li>Master suite with private bathroom and walk-in closet</li>
+                        <li>Large backyard with patio</li>
+                        <li>Attached 2-car garage</li>
+                        <li>Close to schools, parks, and shopping centers</li>
+                    </ul>
+                    <h2>Contact Owner:</h2>
+                    <p>+91 938****76</p>
+
+                    <h2>Price:</h2>
+                    <p>$500,000</p>
+
+                    <button onclick="window.location.href='contact.php'">Buy Now</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 BK Real Estate. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
